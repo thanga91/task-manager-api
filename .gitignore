@@ -2,4 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/TaskManagerApi/v15/Server/sqlite3
+/.vs
+/TaskManager.Business/bin
+/TaskManager.Business/obj
+/TaskManagerApi/bin
+/TaskManagerApi/obj

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
+using TaskManager.Business;
 
 namespace TaskManagerApi
 {
@@ -23,6 +24,8 @@ namespace TaskManagerApi
             {
                 c.SwaggerDoc("v1", new Info { Title = "Task Manager API", Version = "v1" });
             });
+
+            services.AddTransient<ITaskManagerBusiness, TaskManagerBusiness>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

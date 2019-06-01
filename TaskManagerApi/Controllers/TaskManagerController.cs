@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TaskManager.Business;
 
 namespace TaskManagerApi.Controllers
 {
@@ -11,10 +12,17 @@ namespace TaskManagerApi.Controllers
     [ApiController]
     public class TaskManagerController : ControllerBase
     {
+        private readonly ITaskManagerBusiness _taskManagerBusiness;
+        public TaskManagerController(ITaskManagerBusiness taskManagerBusiness)
+        {
+            _taskManagerBusiness = taskManagerBusiness;
+        }
+
         [HttpGet("")]
         public async Task<IActionResult> GetAllTasks()
         {
-            return Ok("Get All Tasks");
+            var tasks = await _taskManagerBusiness.GetAllTasks();
+            return Ok(tasks);
         }
 
         [HttpPost("")]
