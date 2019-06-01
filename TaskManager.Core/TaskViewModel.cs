@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TaskManager.Repository.Context
+namespace TaskManager.Core
 {
-    public class Task
+    public class TaskViewModel
     {
         public int Id { get; set; }
-
         public int ParentId { get; set; }
 
         public string TaskName { get; set; }
 
+        public string ParentTaskName { get; set; }
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
 
         public int Priority { get; set; }
+
+
     }
 }

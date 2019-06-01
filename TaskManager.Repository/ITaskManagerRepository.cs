@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace TaskManager.Repository
 {
-    public interface ITaskManagerRepository
+    public interface ITaskManagerRepository<TEntity>
     {
-        Task<string> GetAllTasks();
+        Task<IEnumerable<TEntity>> GetAllTasks();
     }
 }

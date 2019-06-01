@@ -38,7 +38,7 @@ namespace TaskManagerApi
             });
 
             services.AddTransient<ITaskManagerBusiness, TaskManagerBusiness>();
-            services.AddTransient<ITaskManagerRepository, TaskManagerRepository>();
+            services.AddTransient<ITaskManagerRepository<TaskDetails>, TaskManagerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

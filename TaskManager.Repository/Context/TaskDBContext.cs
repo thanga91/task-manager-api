@@ -11,6 +11,6 @@ namespace TaskManager.Repository.Context
         {
         }
 
-        DbSet<Task> Employees { get; set; }
+        DbSet<TaskDetails> TaskDetails { get; set; }
     }
 }
