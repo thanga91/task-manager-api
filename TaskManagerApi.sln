@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Business", "TaskManager.Business\TaskManager.Business.csproj", "{6492F781-4D1D-4D44-B393-689807B622A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Repository", "TaskManager.Repository\TaskManager.Repository.csproj", "{1DF9690C-CC7A-4EAA-A76F-1C67E78031A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +27,17 @@ Global
 		{6492F781-4D1D-4D44-B393-689807B622A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6492F781-4D1D-4D44-B393-689807B622A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6492F781-4D1D-4D44-B393-689807B622A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DF9690C-CC7A-4EAA-A76F-1C67E78031A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DF9690C-CC7A-4EAA-A76F-1C67E78031A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DF9690C-CC7A-4EAA-A76F-1C67E78031A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DF9690C-CC7A-4EAA-A76F-1C67E78031A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6492F781-4D1D-4D44-B393-689807B622A5} = {34874BFD-6F42-4806-9ED2-170479716F13}
+		{1DF9690C-CC7A-4EAA-A76F-1C67E78031A4} = {50D15C19-ABC6-4FE1-BA06-515DA896FB2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8714581-1D2B-4BE6-8FAB-D9DDB780304D}

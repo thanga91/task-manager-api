@@ -7,3 +7,5 @@
 /TaskManager.Business/obj
 /TaskManagerApi/bin
 /TaskManagerApi/obj
+/TaskManager.Repository/obj
+/TaskManager.Repository/bin/Debug/netcoreapp2.1
