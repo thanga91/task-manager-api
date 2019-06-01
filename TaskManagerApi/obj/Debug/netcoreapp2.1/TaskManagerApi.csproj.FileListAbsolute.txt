@@ -1,0 +1,14 @@
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\bin\Debug\netcoreapp2.1\TaskManagerApi.deps.json
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\bin\Debug\netcoreapp2.1\TaskManagerApi.runtimeconfig.json
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\bin\Debug\netcoreapp2.1\TaskManagerApi.runtimeconfig.dev.json
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\bin\Debug\netcoreapp2.1\TaskManagerApi.dll
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\obj\Debug\netcoreapp2.1\TaskManagerApi.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\obj\Debug\netcoreapp2.1\TaskManagerApi.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\obj\Debug\netcoreapp2.1\TaskManagerApi.RazorAssemblyInfo.cache
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\obj\Debug\netcoreapp2.1\TaskManagerApi.RazorAssemblyInfo.cs
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\obj\Debug\netcoreapp2.1\TaskManagerApi.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\obj\Debug\netcoreapp2.1\TaskManagerApi.AssemblyInfo.cs
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\obj\Debug\netcoreapp2.1\TaskManagerApi.RazorTargetAssemblyInfo.cache
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\bin\Debug\netcoreapp2.1\TaskManagerApi.pdb
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\obj\Debug\netcoreapp2.1\TaskManagerApi.dll
+C:\Users\Admin\Documents\Assessments\FinalAcessment\TaskManagerApi\TaskManagerApi\obj\Debug\netcoreapp2.1\TaskManagerApi.pdb
