@@ -5,6 +5,7 @@ using TaskManager.Repository;
 using TaskManager.Repository.Context;
 using TaskManager.Core;
 using System.Collections.Generic;
+using TaskManager.Core.Exceptions;
 
 namespace TaskManager.Business
 {
@@ -41,6 +42,11 @@ namespace TaskManager.Business
         {
             var taskEntity = await _taskManagerRepository.Get(id);
 
+            if (taskEntity == null)
+            {
+                throw new TaskDetailsException(ErrorCodes.TaskNotFoundResponse, "Task is empty");
+            }
+
             var taskViewModel = new TaskViewModel()
             {
                 TaskName = taskEntity.TaskName,
@@ -56,6 +62,11 @@ namespace TaskManager.Business
 
         public async Task AddTask(TaskViewModel taskDetails)
         {
+            if (taskDetails == null)
+            {
+                throw new TaskDetailsException(ErrorCodes.TaskBadRequestResponse, "Task is empty");
+            }
+
             var taskEntity = new TaskDetails()
             {
                 TaskName = taskDetails.TaskName,
@@ -71,6 +82,11 @@ namespace TaskManager.Business
 
         public async Task UpdateTask(TaskViewModel taskDetails)
         {
+            if (taskDetails == null)
+            {
+                throw new TaskDetailsException(ErrorCodes.TaskNotFoundResponse, "Task is empty");
+            }
+
             var taskEntity = new TaskDetails()
             {
                 TaskName = taskDetails.TaskName,
@@ -90,10 +106,12 @@ namespace TaskManager.Business
         public async Task DeleteTask(int id)
         {
             var taskEntity = await _taskManagerRepository.Get(id);
-            if (taskEntity != null)
+            if (taskEntity == null)
             {
-                await _taskManagerRepository.Delete(taskEntity);
+                throw new TaskDetailsException(ErrorCodes.TaskNotFoundResponse, "Task is empty");
             }
+
+            await _taskManagerRepository.Delete(taskEntity);
         }
     }
 }

@@ -26,7 +26,11 @@ namespace TaskManagerApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            });
+            services.AddMvc();            
 
             services.AddDbContext<TaskDbContext>(item => item.UseSqlServer(Configuration.GetConnectionString("TaskManager")));
 
@@ -53,6 +57,7 @@ namespace TaskManagerApi
                       c.SwaggerEndpoint("/swagger/v1/swagger.json", "Task Manager V1");
                   });
             }
+            app.UseCors("AllowOrigin");
 
             app.UseMvc();
         }
