@@ -15,9 +15,10 @@ namespace TaskManager.Business
         {
             _taskManagerRepository = taskManagerRepository;
         }
+
         public async Task<IEnumerable<TaskViewModel>> GetAllTasks()
         {
-            var taskEntities = await _taskManagerRepository.GetAllTasks();
+            var taskEntities = await _taskManagerRepository.GetAll();
             var tasks = new List<TaskViewModel>();
             foreach(var taskEnity in taskEntities)
             {
@@ -30,6 +31,22 @@ namespace TaskManager.Business
             }
             
             return await Task.FromResult(tasks);
+        }
+
+
+        public async Task AddTask(TaskViewModel taskDetails)
+        {
+            var taskEntity = new TaskDetails()
+            {
+                TaskName = taskDetails.TaskName,
+                ParentId = 0,
+                Priority = 5,
+                StartDate = taskDetails.StartDate,
+                EndDate = taskDetails.EndDate,
+
+            };
+
+            await _taskManagerRepository.Add(taskEntity);
         }
 
     }

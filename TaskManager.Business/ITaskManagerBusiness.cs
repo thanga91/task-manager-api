@@ -9,5 +9,7 @@ namespace TaskManager.Business
     public interface ITaskManagerBusiness
     {
         Task<IEnumerable<TaskViewModel>> GetAllTasks();
+
+        Task AddTask(TaskViewModel taskDetails);
     }
 }

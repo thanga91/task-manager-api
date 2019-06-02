@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TaskManager.Business;
+using TaskManager.Core;
 
 namespace TaskManagerApi.Controllers
 {
@@ -26,8 +27,10 @@ namespace TaskManagerApi.Controllers
         }
 
         [HttpPost("")]
-        public async Task<IActionResult> AddTask()
+        public async Task<IActionResult> AddTask(TaskViewModel taskViewModel)
         {
+
+            await _taskManagerBusiness.AddTask(taskViewModel);
             return Ok("Task Added");
         }
 

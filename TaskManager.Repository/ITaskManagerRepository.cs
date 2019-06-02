@@ -7,6 +7,8 @@ namespace TaskManager.Repository
 {
     public interface ITaskManagerRepository<TEntity>
     {
-        Task<IEnumerable<TEntity>> GetAllTasks();
+        Task<IEnumerable<TEntity>> GetAll();
+
+        Task Add(TEntity entity);
     }
 }
