@@ -26,6 +26,14 @@ namespace TaskManagerApi.Controllers
             return Ok(tasks);
         }
 
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            var task = await _taskManagerBusiness.GetTask(id);
+            return Ok(task);
+        }
+
         [HttpPost("")]
         public async Task<IActionResult> AddTask(TaskViewModel taskViewModel)
         {
@@ -35,15 +43,17 @@ namespace TaskManagerApi.Controllers
         }
 
         [HttpPut("")]
-        public async Task<IActionResult> UpdateTask()
+        public async Task<IActionResult> UpdateTask(TaskViewModel taskViewModel)
         {
+            await _taskManagerBusiness.UpdateTask(taskViewModel);
             return Ok("Task updated");
         }
 
         [HttpDelete("")]
 
-        public async Task<IActionResult> DeleteTask()
+        public async Task<IActionResult> DeleteTask(int id)
         {
+            await _taskManagerBusiness.DeleteTask(id);
             return Ok("Deleted Task");
         }
     }

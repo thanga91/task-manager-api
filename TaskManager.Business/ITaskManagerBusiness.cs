@@ -10,6 +10,12 @@ namespace TaskManager.Business
     {
         Task<IEnumerable<TaskViewModel>> GetAllTasks();
 
+        Task<TaskViewModel> GetTask(int id);
+
         Task AddTask(TaskViewModel taskDetails);
+
+        Task UpdateTask(TaskViewModel taskDetails);
+
+        Task DeleteTask(int id);
     }
 }
