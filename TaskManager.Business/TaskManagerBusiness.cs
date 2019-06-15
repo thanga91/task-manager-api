@@ -6,6 +6,7 @@ using TaskManager.Repository.Context;
 using TaskManager.Core;
 using System.Collections.Generic;
 using TaskManager.Core.Exceptions;
+using System.Linq;
 
 namespace TaskManager.Business
 {
@@ -28,6 +29,7 @@ namespace TaskManager.Business
                     Id = taskEntity.Id,
                     TaskName = taskEntity.TaskName,
                     ParentId = taskEntity.ParentId,
+                    ParentTaskName = GetParentTaskName(taskEntity.ParentId, taskEntities) ?? string.Empty,
                     Priority = taskEntity.Priority,
                     StartDate = taskEntity.StartDate,
                     EndDate = taskEntity.EndDate
@@ -36,7 +38,6 @@ namespace TaskManager.Business
             
             return await Task.FromResult(tasks);
         }
-
 
         public async Task<TaskViewModel> GetTask(int id)
         {
@@ -113,5 +114,11 @@ namespace TaskManager.Business
 
             await _taskManagerRepository.Delete(taskEntity);
         }
+
+        private string GetParentTaskName(int parentId, IEnumerable<TaskDetails> taskEntities)
+        {
+            return taskEntities.FirstOrDefault(task => task.Id == parentId)?.TaskName;
+        }
+
     }
 }

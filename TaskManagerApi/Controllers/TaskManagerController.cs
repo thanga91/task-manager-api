@@ -76,7 +76,7 @@ namespace TaskManagerApi.Controllers
             }
 
            
-            return CreatedAtRoute("Get", new { Id = taskViewModel.Id }, taskViewModel);
+            return StatusCode((int)HttpStatusCode.Created);
         }
 
         [HttpPut("")]
